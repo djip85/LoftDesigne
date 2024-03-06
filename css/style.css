@@ -1,0 +1,127 @@
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 1.3;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.header {
+    display: flex;
+    padding-top: 10px;
+    margin-bottom: 50px;
+}
+.header-left {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+}
+.menu-list {
+    display: flex;
+    gap: 24px;
+}
+.menu-item--active {
+    position: relative;
+}
+.menu-item--active::after {
+    content: '>';
+    font: 11px "Consolas", monospace;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 3px;
+    right: -11px;
+}
+.header-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 48px;
+}
+.breadcrumb {
+    margin-bottom: 35px;
+}
+ul.breadcrumb li {
+    display: inline;
+}
+ul.breadcrumb li + li::before {
+    padding: 2px;
+    content: "/\00a0";
+}
+ul.breadcrumb li a {
+    color: #929292;
+    transition: color 0.3s;
+}
+ul.breadcrumb li a:hover {
+    color: #020304;
+}
+.breadcrumb-product-grid li a {
+    text-decoration: underline;
+}
+.breadcrumb-product-grid {
+    margin-bottom: 0;
+}
+.category {
+    display: flex;
+    text-align: center;
+    margin-left: -30px;
+    margin-bottom: 40px;
+}
+.category-item {
+    width: 136px;
+    padding: 16px 5px;
+    color: #020304;
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+.category-item:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+.category-item--active {
+    opacity: 1;
+}
+.category-img {
+    margin-bottom: 15px;
+}
+.category-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+.product-grid {
+    display: grid;
+}
+.product-grid-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.product-grid-right {
+    display: flex;
+    gap: 56px;
+}
+
+.product-grid-content {
+    display: grid;
+    grid-template-columns: repeat(4, 312px);
+    max-width: 100%;
+    gap: 32px;
+    justify-self: center;
+}
+.item-container {
+    display: grid;
+    max-width: 312px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 24px;
+    font-size: 16px;
+}
+.item-container img {
+    grid-column: span 2;
+}
+.item-price {
+    justify-self: end;
+    font-weight: bold;
+}

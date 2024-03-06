@@ -1,0 +1,172 @@
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #cfcfcf;
+    padding: 24px;
+    font-size: 16px;
+}
+.filter-header-title {
+    position: relative;
+    font-weight: bold;
+}
+.filter-header-title::after {
+    content: '>';
+    font: 16px "Consolas", monospace;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 0px;
+    right: -13px;
+}
+.button-accept {
+    padding: 12px 20px;
+    margin-right: 32px;
+    background-color: #020304;
+    color: #fff;
+}
+.reset-all {
+    border-bottom: 1px solid #020304;
+}
+.filter-grid {
+    display: flex;
+    width: 100%;
+    border-top: 1px solid #cfcfcf;
+    border-bottom: 1px solid #cfcfcf;
+}
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    padding: 20px;
+    width: 20%;
+}
+.filter-title {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.reset {
+    margin-left: auto;
+    text-decoration: underline;
+    font-size: 12px;
+    display: none;
+}
+.filter-item {
+    display: inline-flex;
+    align-items: center;
+    width: max-content;
+    gap: 12px;
+    position: relative;
+    color: #929292;
+    font-weight: 300;
+}
+.radio-checkbox--hidden {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    z-index: -1;
+}
+.check-style {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #cfcfcf;
+    border-radius: 4px;
+    background-color: #fff;
+}
+.check-style.radio {
+    border-radius: 50%;
+}
+.color-circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: -6px;
+}
+.color-circle--white {
+    background-color: #fff;
+    border: 1px solid #e7e7e7;
+}
+.color-circle--black {
+    background-color: #020304;
+}
+.color-circle--red {
+    background-color: #D23E3E;
+}
+.color-circle--blue {
+    background-color: #3E82D2;
+}
+.color-circle--green {
+    background-color: #3ED25F;
+}
+.color-circle--begie {
+    background-color: #FDE2BC;
+}
+.color-circle--burgundy {
+    background-color: #6B1C1E;
+}
+.radio-checkbox--hidden:checked + .check-style::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #020304;
+    /* border: 1px solid #020304; */
+    border-radius: 4px;
+    top: 1px;
+    left: 0;
+    background-image: url(../img/check.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.radio-checkbox--hidden:checked + .check-style.radio::before {
+    background-image: url(../img/radio.svg);
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+}
+.radio-checkbox--hidden:checked ~ .label-title {
+    color: #020304;
+}
+.filter-item:hover .check-style {
+    border-color: #020304;
+    transition: 0.3s;
+}
+.filter-item:hover .label-title {
+    color: #020304;
+    transition: 0.3s;
+}
+.label-title-dimentions {
+    color: #020304;
+    margin-bottom: 15px;
+}
+.input-text-container {
+    display: inline-flex;
+    column-gap: 16px;
+    margin-bottom: 10px;
+}
+.input-text {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #cfcfcf;
+    line-height: 1.8;
+    color: #020304;
+    max-width: 80px;
+}
+.input-text::placeholder {
+    color: #cfcfcf;
+}
+.input-text::-webkit-inner-spin-button,
+.input-text::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+.filter-bottom-title {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #cfcfcf;
+    margin-bottom: 30px;
+}
